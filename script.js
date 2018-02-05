@@ -7,11 +7,16 @@ slider1.oninput = function() {
     output.textContent = this.value;
 }
 
-//PHOTO SLIDESHOW
+// PHOTO SLIDESHOW
 var slideIndex = 1;
 showSlides(slideIndex);
 
 // NEXT/PREV CONTROLS
 function plusSlides(n) {
   showSlides(slideIndex += n);
+}
+
+// THUMBNAIL IMAGE CONTROLS
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
