@@ -6,3 +6,6 @@ output.textContent = slider1.value;
 slider1.oninput = function() {
     output.textContent = this.value;
 }
+
+//PHOTO SLIDESHOW
+var slideIndex = 1;
