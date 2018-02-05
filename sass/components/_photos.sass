@@ -1,0 +1,91 @@
+.photos
+  &__container
+    position: relative
+
+  &__slides
+    display: none
+
+    &-number
+      position: absolute
+      top: 0
+      padding: 8px 12px
+      font-size: 12px
+      color: #f2f2f2
+
+  &__big
+    height: 50rem
+
+  &__small
+    height: 10rem
+    cursor: pointer
+
+  &__big,
+  &__small
+    width: 100%
+    margin-bottom: 1rem
+    background-size: cover
+    background-position: center
+
+  &__btn
+    margin: 0 0 1rem .5rem
+    padding: 0 1rem
+    border: none
+    border-radius: 2px
+    background-color: $color-blue
+    color: white
+    font-size: 1.6rem
+    cursor: pointer
+
+  &-1
+    background-image: url("https://images.unsplash.com/photo-1508253578933-20b529302151?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ffb9c02dfb2c92e69c09ebface4ab19a&auto=format&fit=crop&w=1515&q=80")
+
+  &-2
+    background-image: url("https://images.unsplash.com/photo-1439130490301-25e322d88054?ixlib=rb-0.3.5&s=860c726743be0381914cbf7782564356&auto=format&fit=crop&w=1489&q=80")
+
+  &-3
+    background-image: url("https://images.unsplash.com/photo-1474690455603-a369ec1293f9?ixlib=rb-0.3.5&s=c6f864a1e6f3e9f2fbb8f8f370f5d737&auto=format&fit=crop&w=1350&q=80")
+
+
+.prev,
+.next
+  position: absolute
+  top: 40%
+  width: auto
+  padding: 16px
+  margin-top: -50px
+  color: white
+  cursor: pointer
+  font-weight: bold
+  font-size: 20px
+  border-radius: 0 3px 3px 0
+  user-select: none
+  -webkit-user-select: none
+
+  &:hover,
+  &:hover
+    background-color: rgba(0, 0, 0, 0.8)
+
+.next
+  right: 0
+  border-radius: 3px 0 0 3px
+
+.row
+  display: flex
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.col
+  flex: 1
+
+  &:not(:first-child)
+    margin-left: .5rem
+
+.unselected
+  opacity: 0.6
+
+.active,
+.unselected:hover
+  opacity: 1

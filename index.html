@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Travel App</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-1">
+      <div class="nav-1__item-1">
+        <svg class="icon icon-home3">
+          <use xlink:href="img/sprite.svg#icon-home3"></use>
+        </svg>
+      </div>
+      <div class="nav-1__item-2">
+        <input type="text" placeholder="Search" class="nav-1__search">
+        <button class="nav-1__button">
+          <svg class="icon icon-search">
+            <use xlink:href="img/sprite.svg#icon-search" class="nav-1__search"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="nav-1__item-3">
+        <svg class="icon icon-user">
+          <use xlink:href="img/sprite.svg#icon-user"></use>
+        </svg>
+        <span>Sign in</span>
+      </div>
+    </nav>
+    <nav class="nav-2">
+      <ul class="nav-2__list">
+        <li class="nav-2__list-item nav-2__link-active">
+          <a href="#" class="nav-2__link">Hotels</a>
+        </li>
+        <li class="nav-2__list-item">
+          <a href="#" class="nav-2__link">Flights</a>
+        </li>
+        <li class="nav-2__list-item">
+          <a href="#" class="nav-2__link">Cars</a>
+        </li>
+        <li class="nav-2__list-item">
+          <a href="#" class="nav-2__link">Cruises</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <aside class="aside">
+      <div>
+        <div class="aside__item">
+          <h3 class="aside__header-main">
+            Refine search:
+          </h3>
+          <p>804 hotels</p>
+        </div>
+        <div class="aside__item">
+          <h3 class="aside__header-sub">
+            Name contains
+          </h3>
+          <span>
+            <input type="text" placeholder="Hotel name" id="nameSearch" class="aside__item-search">
+            <label for="nameSearch"></label>
+            <button class="aside__button">
+              <svg class="icon icon-search">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </span>
+        </div>
+        <div class="aside__item">
+          <h3 class="aside__header-sub">
+            Amenities
+          </h3>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="pets">
+            <label for="pets">Pets allowed</label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="wifi">
+            <label for="wifi">Free wifi</label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="breakfast">
+            <label for="breakfast">Free breakfast</label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="pool">
+            <label for="pool">Pool</label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="gym">
+            <label for="gym">Gym</label>
+          </span>
+        </div>
+        <div class="aside__item">
+          <h3 class="aside__header-sub">
+            Price per night
+          </h3>
+          <div class="aside__item-slide-container">
+            <label for="range1" id="display1"></label>
+            <span> $ ></span>
+            <input multiple type="range" step="1" min="1" max="500" value="2,80" class="aside__item-slide" id="range1">
+          </div>
+        </div>
+        <div class="aside__item">
+          <h3 class="aside__header-sub">
+            Star rating
+          </h3>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="fiveStar">
+            <label for="fiveStar">
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+            </label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="fourStar">
+            <label for="fourStar">
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+            </label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="threeStar">
+            <label for="threeStar">
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+            </label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="twoStar">
+            <label for="twoStar">
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+            </label>
+          </span>
+          <span class="aside__item-hover">
+            <input type="checkbox" id="oneStar">
+            <label for="oneStar">
+              <svg class="icon icon-star-full">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+              </svg>
+            </label>
+          </span>
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="footer__paragraph">
+          &copy; 2018 by Auna Carpanzano for sample landing page. Images from <a href="https://unsplash.com/" class="footer__link">Unsplash</a>. SVG icons from <a href="https://icomoon.io/" class="footer__link">Icomoon</a>
+        </p>
+      </footer>
+    </aside>
+    <main class="main">
+      <section class="description">
+        <div class="description__title">
+          <h1 class="description__heading">Hotel Urban</h1>
+          <p class="description__address">77 N Urban Ave, Phoenix, Arizona, 85004, United States of America</p>
+        </div>
+        <div class="description__rating">
+          <div class="description__rating-number">
+            <svg class="icon icon-star-full">
+              <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon icon-star-full">
+              <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon icon-star-full">
+              <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon icon-star-full">
+              <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+          </div>
+          <div class="description__rating-votes">107 Votes</div>
+        </div>
+      </section>
+      <div class="content">
+        <section class="photos">
+          <div class="photos__container">
+            <div class="photos__slides">
+              <div class="photos__slides-number">
+                1 / 3
+              </div>
+              <div class="photos__big photos-1"></div>
+            </div>
+            <div class="photos__slides">
+              <div class="photos__slides-number">
+                2 / 3
+              </div>
+              <div class="photos__big photos-2"></div>
+            </div>
+            <div class="photos__slides">
+              <div class="photos__slides-number">
+                3 / 3
+              </div>
+              <div class="photos__big photos-3"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="row">
+              <div class="col">
+                <div class="unselected photos__small photos-1" onclick="currentSlide(1)"></div>
+              </div>
+              <div class="col">
+                <div class="unselected photos__small photos-2" onclick="currentSlide(2)"></div>
+              </div>
+              <div class="col">
+                <div class="unselected photos__small photos-3" onclick="currentSlide(3)"></div>
+              </div>
+              <button class="photos__btn">
+                See all 10 photos
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="aside-right">
+          <div class="reviews__box">
+            <h2 class="reviews__heading">
+              <p>Exceptional</p>
+              <p>9.2</p>
+            </h2>
+            <div class="reviews__text">
+              <svg class="icon icon-bubble">
+                <use xlink:href="img/sprite.svg#icon-bubble"></use>
+              </svg>
+              <p>
+                <i>"Fantastic! Clean and close to the town." </i>
+                <span class="reviews__date">Jan 1, 2018</span>
+              </p>
+            </div>
+            <div class="reviews__text">
+              <svg class="icon icon-bubble">
+                <use xlink:href="img/sprite.svg#icon-bubble"></use>
+              </svg>
+              <p>
+                <i>"Amazing views and nice pool." </i>
+                <span class="reviews__date">Jan 18, 2018</span>
+              </p>
+            </div>
+            <p class="reviews__bar-text"><strong>Location</strong></p>
+            <div class="reviews__bar-container">
+              <div class="reviews__bar reviews__bar-location">&nbsp;</div>
+            </div>
+            <p class="reviews__bar-text">Fantastic location</p>
+            <p class="reviews__bar-text-1"><strong>Service</strong></p>
+            <div class="reviews__bar-container">
+              <div class="reviews__bar reviews__bar-service">&nbsp;</div>
+            </div>
+            <p class="reviews__bar-text">Fantastic service</p>
+            <p class="reviews__bar-text-1"><strong>Wifi</strong></p>
+            <div class="reviews__bar-container">
+              <div class="reviews__bar reviews__bar-wifi">&nbsp;</div>
+            </div>
+            <p class="reviews__bar-text">Wifi is good</p>
+            <p class="reviews__bar-text-1"><strong>Breakfast</strong></p>
+            <div class="reviews__bar-container">
+              <div class="reviews__bar reviews__bar-breakfast">&nbsp;</div>
+            </div>
+            <p class="reviews__bar-text">Breakfast can be improved</p>
+            <div class="reviews__text">
+              <a href="#" class="reviews__link">See all reviews</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="details">
+        <ul class="details__list">
+          <h2 class="details__header">Main amenities</h2>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Free WiFi
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Air conditioning
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Heating
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Pets allowed
+          </li>
+        </ul>
+        <ul class="details__list">
+          <h2 class="details__header">Extra amenities</h2>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Refrigerator
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Microwave
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Kitchen
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Television
+          </li>
+        </ul>
+        <ul class="details__list">
+          <h2 class="details__header">Around the area</h2>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Restaurants
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Shopping
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Theatre
+          </li>
+          <li class="details__list-item">
+            <svg class="icon icon-checkmark">
+              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+            </svg>
+            Museum
+          </li>
+        </ul>
+      </section>
+      <section class="book">
+        <h2 class="book__heading">
+          Currently 3 rooms available!
+        </h2>
+        <button class="book__btn">
+          <span class="book__btn-visible">Book now</span>
+          <span class="book__btn-invisible">Only 3 rooms left</span>
+        </button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.book__btn
+  position: relative
+  overflow: hidden
+  margin-top: 1rem
+  border: none
+  border-radius: 2px
+  font-size: 1.6rem
+  background-color: #3979f3
+  color: white
+  cursor: pointer
+
+  & > *
+    display: inline-block
+    width: 100%
+    height: 100%
+    transition: all .2s
+
+  &-visible
+    padding: 2rem 5rem
+
+  &-invisible
+    position: absolute
+    left: 0
+    top: -100%
+    padding: 2rem 0
+
+  &:hover &-visible
+    transform: translateY(100%)
+
+  &:hover &-invisible
+      top: 0

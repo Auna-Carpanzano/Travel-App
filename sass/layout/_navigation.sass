@@ -1,0 +1,75 @@
+.nav-1
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1rem
+
+  &__item-1
+    margin-left: 4rem
+
+  &__item-3
+    margin-right: 4rem
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+  &__search
+    margin-right: -3rem
+    padding: 1rem 2rem
+    border-radius: 100px
+    border: none
+    background-color: #f5f4f0
+    transition: all .2s
+
+    &:focus
+      outline: none
+      border: 1px solid black
+
+  &__button
+    border: none
+    background-color: #f5f4f0
+    cursor: pointer
+
+.nav-2
+  font-size: $font-size-small
+
+  &__list
+    display: flex
+
+    &-item
+      position: relative
+      flex: 0 0 25%
+      padding: 1rem
+      list-style: none
+      background-color: $color-black
+
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 2px
+        width: 100%
+        background-color: #d63031
+        border-bottom: 5px solid #222
+        transform: scaleY(0)
+        transition: transform .2s,
+        height .4s cubic-bezier(1,0,0,1) .2s,
+        border-bottom .1s
+
+      &:hover::before
+        transform: scaleY(1)
+        height: 100%
+        border-bottom: 5px solid $color-red
+
+  &__link:link,
+  &__link:visited
+    display: flex
+    justify-content: center
+    position: relative
+    text-decoration: none
+    color: white
+
+  &__link-active
+    border-bottom: 5px solid $color-red
