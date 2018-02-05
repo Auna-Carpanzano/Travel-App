@@ -25,4 +25,5 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("photos__slides");
   var unselected = document.getElementsByClassName("unselected");
+  if (n > slides.length) {slideIndex = 1}
 }
