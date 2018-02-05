@@ -33,4 +33,5 @@ function showSlides(n) {
   for (i = 0; i < unselected.length; i++) {
     unselected[i].className = unselected[i].className.replace(" active", "");
   }
+  slides[slideIndex-1].style.display = "block";
 }
