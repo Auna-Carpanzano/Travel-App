@@ -10,3 +10,8 @@ slider1.oninput = function() {
 //PHOTO SLIDESHOW
 var slideIndex = 1;
 showSlides(slideIndex);
+
+// NEXT/PREV CONTROLS
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
