@@ -23,7 +23,7 @@
   height: 10rem
   padding: 2rem
   background-color: $color-white
-  border-bottom: 1px solid $color-light-gray
+  @include border-bottom
 
 .content
   display: flex
@@ -35,8 +35,8 @@
 .details
   display: flex
   padding: 2rem
-  border-bottom: 2px solid $color-light-gray
-  border-top: 2px solid $color-light-gray
+  @include border-bottom
+  border-top: 1px solid $color-light-gray
 
 .book
   display: flex
