@@ -3,28 +3,48 @@
   justify-content: space-between
   align-items: center
   padding: 1rem
+  flex-wrap: wrap
 
   &__item-1
     margin-left: 4rem
+
+    @media only screen and (max-width: $bp-smallest)
+      margin-left: 0
+
+    @media only screen and (max-width: $bp-mobile)
+      flex: 0 0 50%
+
+  &__item-2
+    flex: 0 0 40%
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media only screen and (max-width: $bp-mobile)
+      order: 1
+      flex: 0 0 100%
 
   &__item-3
     margin-right: 4rem
     display: flex
     align-items: center
-    justify-content: center
+    justify-content: flex-end
     cursor: pointer
+
+    @media only screen and (max-width: $bp-smallest)
+      margin-right: 0
 
   &__search
     margin-right: -3rem
+    margin-left: -1.5rem
     padding: 1rem 2rem
     border-radius: 100px
     border: none
     background-color: #f5f4f0
-    transition: all .2s
-
-    &:focus
-      outline: none
-      border: 1px solid black
+    flex: 0 0 100%
+    display: flex
+    align-items: center
+    justify-content: center
 
   &__button
     border: none

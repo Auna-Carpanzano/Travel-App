@@ -1,15 +1,22 @@
 .container
   display: flex
+  flex-wrap: wrap
 
 .aside
-  flex: 0 0 15%
+  flex: 0 0 16%
   display: flex
   flex-direction: column
   justify-content: space-between
   background-color: $color-light-gray
 
-  &-right
-    height: 20rem
+  @media only screen and (max-width: $bp-medium)
+    flex: 0 0 20%
+
+  @media only screen and (max-width: $bp-small)
+    flex: 0 0 25%
+
+  @media only screen and (max-width: $bp-smallest)
+    flex: 0 0 100%
 
 .main
   flex: 1
@@ -20,23 +27,39 @@
 .description
   display: flex
   justify-content: space-between
+  flex-wrap: wrap
   height: 10rem
-  padding: 2rem
+  padding: 2rem 0 2rem 2rem
   background-color: $color-white
-  border-bottom: 1px solid $color-light-gray
+  @include border-bottom
+
+  @media only screen and (max-width: $bp-small)
+    height: auto
+    padding: 2rem 0 0 0
 
 .content
   display: flex
   flex-direction: row
+  flex-wrap: wrap
 
 .photos
   flex: 0 0 70%
 
+  @media only screen and (max-width: $bp-medium)
+    flex: 0 0 100%
+
+.aside-right
+  flex: 0 0 30%
+
+  @media only screen and (max-width: $bp-medium)
+    flex: 1
+
 .details
   display: flex
+  flex-wrap: wrap
   padding: 2rem
-  border-bottom: 2px solid $color-light-gray
-  border-top: 2px solid $color-light-gray
+  @include border-bottom
+  border-top: 1px solid $color-light-gray
 
 .book
   display: flex
