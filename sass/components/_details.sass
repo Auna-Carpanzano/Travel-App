@@ -2,6 +2,10 @@
   &__list
     flex: 1
 
+    @media only screen and (max-width: $bp-smallest)
+      flex: 0 0 50%
+      padding: 1rem
+
     &-item
       font-size: $font-size-small
       list-style: none
