@@ -51,31 +51,24 @@
   position: absolute
   top: 40%
   width: auto
-  padding: 16px
+  padding: 10px
   margin-top: -50px
-  color: white
+  background-color: $color-white
+  color: $color-blue
   cursor: pointer
   font-weight: bold
-  font-size: 20px
+  font-size: $font-size-large
   border-radius: 0 3px 3px 0
   user-select: none
   -webkit-user-select: none
 
   &:hover,
   &:hover
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba($color-white, 0.8)
 
 .next
   right: 0
   border-radius: 3px 0 0 3px
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
-
-.prev
-  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
-  background-image: linear-gradient(to left, rgba(0, 0, 0, .1), rgba(0, 0, 0, .9))
 
 .row
   display: flex
