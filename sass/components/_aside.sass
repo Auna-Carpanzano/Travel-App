@@ -10,6 +10,10 @@
     &-search
       width: 80%
 
+    &-hover
+      flex: 0 0 100%
+      flex-wrap: wrap
+
     &-hover:hover
       background-color: $color-dark-gray
 
@@ -46,10 +50,36 @@
 
   &__header
     &-main
-      font-size: 1.8rem
+      display: inline-block
 
       @media only screen and (max-width: $bp-small)
         font-size: $font-size-default
 
     &-sub
       font-size: $font-size-small
+      display: inline-block
+
+.accordion
+  padding: 1rem
+  background-color: $color-light-gray
+  color: $color-black
+  font-size: 1.2rem !important
+  cursor: pointer
+  text-align: left
+  border: none
+  outline: none
+  transition: 0.4s
+
+  &:focus,
+  &:hover
+    background-color: $color-dark-gray
+
+.active
+  background-color: $color-dark-gray
+
+.panel
+  max-height: 0
+  overflow: hidden
+  transition: max-height 0.2s ease-out
+  display: flex
+  flex-wrap: wrap

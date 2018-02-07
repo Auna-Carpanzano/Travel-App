@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>Travel App</title>
 </head>
 <body>
@@ -51,134 +52,159 @@
     <aside class="aside">
       <div>
         <div class="aside__item">
-          <h3 class="aside__header-main">
-            Refine search:
-          </h3>
-          <p>804 hotels</p>
-        </div>
-        <div class="aside__item">
-          <h3 class="aside__header-sub">
-            Name contains
-          </h3>
-          <span>
-            <input type="text" placeholder="Hotel name" id="nameSearch" class="aside__item-search">
-            <label for="nameSearch"></label>
-            <button class="aside__button">
-              <svg class="icon icon-search">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
-              </svg>
-            </button>
-          </span>
-        </div>
-        <div class="aside__item">
-          <h3 class="aside__header-sub">
-            Amenities
-          </h3>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="pets">
-            <label for="pets">Pets allowed</label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="wifi">
-            <label for="wifi">Free wifi</label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="breakfast">
-            <label for="breakfast">Free breakfast</label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="pool">
-            <label for="pool">Pool</label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="gym">
-            <label for="gym">Gym</label>
-          </span>
-        </div>
-        <div class="aside__item">
-          <h3 class="aside__header-sub">
-            Price per night
-          </h3>
-          <div class="aside__item-slide-container">
-            <label for="range1" id="display1"></label>
-            <span> $ ></span>
-            <input multiple type="range" step="1" min="1" max="500" value="2,80" class="aside__item-slide" id="range1">
+          <button class="accordion">
+             <i class="fas fa-angle-right fa-lg"></i>
+              <h3 class="aside__header-main">
+                Refine search:
+              </h3>
+          </button>
+          <div class="panel">
+            <p>804 hotels</p>
           </div>
         </div>
         <div class="aside__item">
-          <h3 class="aside__header-sub">
-            Star rating
-          </h3>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="fiveStar">
-            <label for="fiveStar">
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-            </label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="fourStar">
-            <label for="fourStar">
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-            </label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="threeStar">
-            <label for="threeStar">
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-            </label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="twoStar">
-            <label for="twoStar">
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-            </label>
-          </span>
-          <span class="aside__item-hover">
-            <input type="checkbox" id="oneStar">
-            <label for="oneStar">
-              <svg class="icon icon-star-full">
-                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-              </svg>
-            </label>
-          </span>
+          <button class="accordion">
+            <i class="fas fa-angle-right fa-lg"></i>
+            <h3 class="aside__header-sub">
+              Name contains
+            </h3>
+          </button>
+          <div class="panel">
+            <span>
+              <input type="text" placeholder="Hotel name" id="nameSearch" class="aside__item-search">
+              <label for="nameSearch"></label>
+              <button class="aside__button">
+                <svg class="icon icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="aside__item">
+          <button class="accordion">
+            <i class="fas fa-angle-right fa-lg"></i>
+            <h3 class="aside__header-sub">
+              Amenities
+            </h3>
+          </button>
+          <div class="panel">
+            <span class="aside__item-hover">
+              <input type="checkbox" id="pets">
+              <label for="pets">Pets allowed</label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="wifi">
+              <label for="wifi">Free wifi</label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="breakfast">
+              <label for="breakfast">Free breakfast</label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="pool">
+              <label for="pool">Pool</label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="gym">
+              <label for="gym">Gym</label>
+            </span>
+          </div>
+        </div>
+        <div class="aside__item">
+          <button class="accordion">
+          <i class="fas fa-angle-right fa-lg"></i>
+            <h3 class="aside__header-sub">
+              Price per night
+            </h3>
+          </button>
+          <div class="panel">
+            <div class="aside__item-slide-container">
+              <label for="range1" id="display1"></label>
+              <span> $ ></span>
+              <input multiple type="range" step="1" min="1" max="500" value="2,80" class="aside__item-slide" id="range1">
+            </div>
+          </div>
+        </div>
+        <div class="aside__item">
+          <button class="accordion">
+            <i class="fas fa-angle-right fa-lg"></i>
+            <h3 class="aside__header-sub">
+              Star rating
+            </h3>
+          </button>
+          <div class="panel">
+            <span class="aside__item-hover">
+              <input type="checkbox" id="fiveStar">
+              <label for="fiveStar">
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+              </label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="fourStar">
+              <label for="fourStar">
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+              </label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="threeStar">
+              <label for="threeStar">
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+              </label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="twoStar">
+              <label for="twoStar">
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+              </label>
+            </span>
+            <span class="aside__item-hover">
+              <input type="checkbox" id="oneStar">
+              <label for="oneStar">
+                <svg class="icon icon-star-full">
+                  <use xlink:href="img/sprite.svg#icon-star-full"></use>
+                </svg>
+              </label>
+            </span>
+          </div>
         </div>
       </div>
       <footer class="footer">
@@ -232,8 +258,12 @@
               </div>
               <div class="photos__big photos-3"></div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)">
+              <i class="fas fa-angle-left fa-lg"></i>
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+              <i class="fas fa-angle-right fa-lg"></i>
+            </a>
             <div class="row">
               <div class="col">
                 <div class="unselected photos__small photos-1" onclick="currentSlide(1)"></div>
