@@ -46,6 +46,8 @@ for (i = 0; i < acc.length; i++) {
       this.classList.toggle("active");
 
       var panel = this.nextElementSibling;
-
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      }
   });
 }
