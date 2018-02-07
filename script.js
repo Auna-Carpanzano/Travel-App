@@ -36,3 +36,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   unselected[slideIndex-1].className += " active";
 }
+
+//ASIDE TOGGLE DROPDOWNS
+var acc = document.getElementsByClassName("accordion");
+var i;
